@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://luw71wh9-s-workspace-vg0spi.us-west-2.xata.sh/db/esg",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

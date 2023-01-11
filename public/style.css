@@ -1,0 +1,16 @@
+.ac-style {
+	background-color: white;
+	color: black;
+	min-height: 38px;
+}
+.error-text {
+	color: red;
+	display: none;
+}
+.error-display {
+	display: inline;
+}
+/* .test::placeholder {
+	color: red;
+	font-weight: bold;
+} */
