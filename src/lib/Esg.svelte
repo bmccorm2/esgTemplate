@@ -13,7 +13,7 @@
 	<div class="flex justify-evenly mt-2">
 		<div>
 			<input
-				class="rounded-lg"
+				class="rounded"
 				type="checkbox"
 				id="inlineCheckbox1"
 				value={1}
