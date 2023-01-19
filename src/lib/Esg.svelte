@@ -8,238 +8,177 @@
 	let isComplete: number | undefined = undefined;
 </script>
 
-<div class="card border-success">
+<div class="card">
 	<div class="card-header bg-jhJade-100 text-3xl">ESG Details</div>
-	<div class="row">
-		<div class="col d-flex justify-content-evenly">
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="inlineCheckbox1"
-					value={1}
-					bind:group={esgSelections}
-				/>
-				<label class="form-check-label" for="inlineCheckbox1">ENV</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="inlineCheckbox2"
-					value={2}
-					bind:group={esgSelections}
-				/>
-				<label class="form-check-label" for="inlineCheckbox2">SOC</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="inlineCheckbox3"
-					value={3}
-					bind:group={esgSelections}
-				/>
-				<label class="form-check-label" for="inlineCheckbox3">GOV</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="inlineCheckbox5"
-					value={4}
-					bind:group={esgSelections}
-				/>
-				<label class="form-check-label" for="inlineCheckbox5">Other</label>
-			</div>
+	<div class="flex justify-evenly mt-2">
+		<div>
+			<input
+				class="rounded-lg"
+				type="checkbox"
+				id="inlineCheckbox1"
+				value={1}
+				bind:group={esgSelections}
+			/>
+			<label class="" for="inlineCheckbox1">ENV</label>
+		</div>
+		<div>
+			<input
+				class="rounded"
+				type="checkbox"
+				id="inlineCheckbox2"
+				value={2}
+				bind:group={esgSelections}
+			/>
+			<label class="" for="inlineCheckbox2">SOC</label>
+		</div>
+		<div>
+			<input
+				class="rounded"
+				type="checkbox"
+				id="inlineCheckbox3"
+				value={3}
+				bind:group={esgSelections}
+			/>
+			<label class="" for="inlineCheckbox3">GOV</label>
+		</div>
+		<div>
+			<input
+				class="rounded"
+				type="checkbox"
+				id="inlineCheckbox5"
+				value={4}
+				bind:group={esgSelections}
+			/>
+			<label class="" for="inlineCheckbox5">Other</label>
 		</div>
 	</div>
-	<div class="row text-center">
+	<div class="flex justify-center my-2">
 		{#if esgSelections.find((e) => e === 1)}
-			<div class="col border border-3 border-primary m-1" transition:fade>
-				<h5 class="text-success"><u>Environment</u></h5>
-				<div class="row m-auto">
-					{#each esgMapping.filter((e) => e.component === "env") as topic}
-						<div class="form-check text-start">
-							<input
-								class="form-check-input"
-								type="checkbox"
-								value=""
-								id={`"${topic.value}"`}
-							/>
-							<label class="form-check-label" for={`"${topic.value}"`}>
-								{topic.value}
-							</label>
-						</div>
-					{/each}
-				</div>
+			<div class="border-4 border-sky-600 m-1 px-2 pb-2" transition:fade>
+				<h5 class="text-center text-2xl text-jhJade-100 mb-2 underline">
+					Environment
+				</h5>
+				{#each esgMapping.filter((e) => e.component === "env") as topic}
+					<div>
+						<input class="" type="checkbox" value="" id={`"${topic.value}"`} />
+						<label class="" for={`"${topic.value}"`}>
+							{topic.value}
+						</label>
+					</div>
+				{/each}
 			</div>
 		{/if}
 		{#if esgSelections.find((e) => e === 2)}
-			<div class="col border border-3 border-primary m-1" transition:fade>
-				<h5 class="text-success"><u>Social</u></h5>
-				<div class="row m-auto">
-					{#each esgMapping.filter((e) => e.component === "soc") as topic}
-						<div class="form-check text-start">
-							<input
-								class="form-check-input"
-								type="checkbox"
-								value=""
-								id={`"${topic.value}"`}
-							/>
-							<label class="form-check-label" for={`"${topic.value}"`}>
-								{topic.value}
-							</label>
-						</div>
-					{/each}
-				</div>
+			<div class="border-4 border-sky-600 m-1 px-2 pb-2" transition:fade>
+				<h5 class="text-center text-2xl text-jhJade-100 mb-2 underline">
+					Social
+				</h5>
+				{#each esgMapping.filter((e) => e.component === "soc") as topic}
+					<div>
+						<input class="" type="checkbox" value="" id={`"${topic.value}"`} />
+						<label class="" for={`"${topic.value}"`}>
+							{topic.value}
+						</label>
+					</div>
+				{/each}
 			</div>
 		{/if}
 		{#if esgSelections.find((e) => e === 3)}
-			<div class="col border border-3 border-primary m-1" transition:fade>
-				<h5 class="text-success"><u>Governance</u></h5>
-				<div class="row m-auto">
-					{#each esgMapping.filter((e) => e.component === "gov") as topic}
-						<div class="form-check text-start">
-							<input
-								class="form-check-input"
-								type="checkbox"
-								value=""
-								id={`"${topic.value}"`}
-							/>
-							<label class="form-check-label" for={`"${topic.value}"`}>
-								{topic.value}
-							</label>
-						</div>
-					{/each}
-				</div>
+			<div class="border-4 border-sky-600 m-1 px-2 pb-2" transition:fade>
+				<h5 class="text-center text-2xl text-jhJade-100 mb-2 underline">
+					Governance
+				</h5>
+				{#each esgMapping.filter((e) => e.component === "gov") as topic}
+					<div>
+						<input class="" type="checkbox" value="" id={`"${topic.value}"`} />
+						<label class="" for={`"${topic.value}"`}>
+							{topic.value}
+						</label>
+					</div>
+				{/each}
 			</div>
 		{/if}
 	</div>
-	<hr />
-	<div class="row mt-3 align-items-center">
-		<div class="col-4">
-			<input class="form-control" type="file" id="formFile" />
+	<hr class="mx-4" />
+	<div class="flex my-2 align-center px-5">
+		<div class="w-6/12 text-center">
+			<input type="file" id="formFile" />
 		</div>
-		<div class="col-4 text-center">
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="inlineCheckbox4"
-					bind:checked={isCollaborative}
-				/>
-				<label class="form-check-label" for="inlineCheckbox4"
-					>Collaborative</label
-				>
-			</div>
+		<div class="w-2/12 text-center">
+			<input
+				type="checkbox"
+				id="inlineCheckbox4"
+				bind:checked={isCollaborative}
+			/>
+			<label class="form-check-label" for="inlineCheckbox4">Collaborative</label
+			>
 		</div>
 		{#if isCollaborative}
-			<div class="col-4">
+			<div class="w-4/12">
 				<input
 					type="text"
 					placeholder="Organizations/Initiatives"
-					class="form-control"
+					class="rounded w-full"
 				/>
 			</div>
 		{/if}
 	</div>
-	<hr />
-	<div class="row text-center mt-3">
-		<div class="col">
-			<span class="text-info me-2">Engagement Status</span>
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="radio"
-					name="engagementStatusOptions"
-					id="inlineRadio11"
-					bind:group={isComplete}
-					value={1}
-				/>
-				<label class="form-check-label" for="inlineRadio11">New</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="radio"
-					name="engagementStatusOptions"
-					id="inlineRadio22"
-					bind:group={isComplete}
-					value={2}
-				/>
-				<label class="form-check-label" for="inlineRadio22">Follow Up</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input
-					class="form-check-input"
-					type="radio"
-					name="engagementStatusOptions"
-					id="inlineRadio33"
-					value={3}
-					bind:group={isComplete}
-				/>
-				<label class="form-check-label" for="inlineRadio33">Completed</label>
-			</div>
+	<hr class="mx-4" />
+	<div class="flex justify-center mt-3">
+		<div class="text-sky-500 me-2 mx-4">Engagement Status</div>
+		<div class="mx-2">
+			<input
+				type="radio"
+				name="engagementStatusOptions"
+				id="inlineRadio11"
+				bind:group={isComplete}
+				value={1}
+			/>
+			<label for="inlineRadio11">New</label>
+		</div>
+		<div class="mx-2">
+			<input
+				type="radio"
+				name="engagementStatusOptions"
+				id="inlineRadio22"
+				bind:group={isComplete}
+				value={2}
+			/>
+			<label for="inlineRadio22">Follow Up</label>
+		</div>
+		<div class="mx-2">
+			<input
+				type="radio"
+				name="engagementStatusOptions"
+				id="inlineRadio33"
+				value={3}
+				bind:group={isComplete}
+			/>
+			<label for="inlineRadio33">Completed</label>
 		</div>
 	</div>
-	<div class="row mt-3">
-		<div class="col">
-			<div class="form-floating">
-				<textarea
-					class="form-control"
-					placeholder="ESG SUMMARY"
-					id="floatingTextarea2"
-					style="height: 100px"
-				/>
-				<label class="text-danger" for="floatingTextarea2"
-					>ESG Summary - to be used for client reporting
-				</label>
-			</div>
-		</div>
+	<div class="px-4 mt-2">
+		<textarea
+			class="form-control w-full h-28 rounded-md px-2 pt-2 text-jhSlate-100"
+			placeholder="ESG SUMMARY - to be used for client reporting"
+		/>
 	</div>
-	<div class="row mt-3">
-		<div class="col">
-			<div class="form-floating">
-				<textarea
-					class="form-control"
-					placeholder="ESG SUMMARY"
-					id="floatingTextarea2"
-					style="height: 100px"
-				/>
-				<label for="floatingTextarea2"
-					>Objective(s) - Describe specific asks for a company</label
-				>
-			</div>
-		</div>
+	<div class="px-4 mt-2">
+		<textarea
+			class="form-control w-full h-28 rounded-md px-2 pt-2 text-jhSlate-100"
+			placeholder=" Objective(s) - Describe specific asks for a company"
+		/>
 	</div>
-	<div class="row mt-3">
-		<div class="col">
-			<div class="form-floating">
-				<textarea
-					class="form-control"
-					placeholder="ESG SUMMARY"
-					id="floatingTextarea2"
-					style="height: 100px"
-				/>
-				<label for="floatingTextarea2"
-					>Outcome(s) - Any changes made; areas to follow up; impact on
-					investment recommendation, etc</label
-				>
-			</div>
-		</div>
+	<div class="px-4 mt-2">
+		<textarea
+			class="form-control w-full h-28 rounded-md px-2 pt-2 text-jhSlate-100"
+			placeholder="Outcome(s) - any changes made; areas to follow up; impact on investment recommendation, etc."
+		/>
 	</div>
-	<div class="row mt-3">
-		<div class="col">
-			<div class="form-floating">
-				<textarea
-					class="form-control"
-					placeholder="Email Message"
-					id="floatingTextarea2"
-					style="height: 200px"
-				/>
-				<label for="floatingTextarea2">Details</label>
-			</div>
-		</div>
+	<div class="px-4 mt-2 mb-4">
+		<textarea
+			class="form-control w-full h-56 rounded-md px-2 pt-2 text-jhSlate-100"
+			placeholder="Details"
+		/>
 	</div>
 </div>

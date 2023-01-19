@@ -18,7 +18,7 @@
 					<Security />
 				</div>
 			</div>
-			<div class="mt-3 w-full">
+			<div class="mt-3 mx-4">
 				<Esg />
 			</div>
 			<div class="flex justify-center my-3">
