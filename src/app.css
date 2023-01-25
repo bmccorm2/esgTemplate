@@ -15,7 +15,9 @@
 .ac-style {
 	background-color: white;
 	color: black;
-	min-height: 38px;
+}
+#tester::placeholder {
+	font-weight: bold;
 }
 .error-text {
 	color: red;

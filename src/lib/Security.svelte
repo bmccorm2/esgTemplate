@@ -16,10 +16,11 @@
 		<div class="flex items-center justify-center">
 			<AutoComplete
 				items={tickers}
+				id="tester"
 				labelFieldName="ticker"
 				placeholder="Ticker"
 				maxItemsToShowInList="10"
-				inputClassName="ac-style rounded w-full placeholder-red-500"
+				inputClassName="ac-style rounded w-full placeholder-red-600"
 				bind:selectedItem={security}
 				showClear
 				hideArrow
@@ -29,7 +30,7 @@
 			<span class="w-48">Company</span>
 			<input
 				type="text"
-				class="bg-gray-300 rounded w-full"
+				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
 				readonly
 				bind:value={companyName}
 			/>
@@ -38,7 +39,7 @@
 			<span class="w-48">GICS Sector</span>
 			<input
 				type="text"
-				class="bg-gray-300 rounded w-full"
+				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
 				readonly
 				bind:value={gicsSector}
 			/>
@@ -47,7 +48,7 @@
 			<span class="w-48">Country Of Risk</span>
 			<input
 				type="text"
-				class="bg-gray-300 rounded w-full"
+				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
 				readonly
 				bind:value={countryOfRisk}
 			/>

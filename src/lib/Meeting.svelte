@@ -3,16 +3,18 @@
 	<div class="p-4">
 		<div class="flex items-center justify-around">
 			<div class="">
-				<span class="text-red-500">Engagement Type</span>
-				<select class="">
+				<span class="text-red-500 font-bold">Engagement Type</span>
+				&nbsp;
+				<select class="rounded text-jhSlate-100 w-40 px-1">
 					<option value={undefined} hidden selected />
 					<option value="1">Meeting</option>
 					<option value="2">Call</option>
 					<option value="3">Email</option>
 				</select>
 			</div>
-			<div class="">
-				<span class="text-red-500"> Meeting Date</span>
+			<div class="rounded text-jhSlate-100 px-1">
+				<span class="text-red-500 font-bold">Meeting Date</span>
+				&nbsp;
 				<input type="date" class="" />
 			</div>
 		</div>
@@ -30,10 +32,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- <style>
-	:root {
-		--date-picker-background: #1b1e27;
-		--date-picker-foreground: #f7f7f7;
-	}
-</style> -->
