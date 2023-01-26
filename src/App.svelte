@@ -4,7 +4,7 @@
 	import Security from "./lib/Security.svelte";
 </script>
 
-<div class="container mx-auto mt-4">
+<div class="container mx-auto mt-4 px-12">
 	<div class="card">
 		<form>
 			<div class="card-header text-5xl bg-jhCerulean-100 text-white">

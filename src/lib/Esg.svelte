@@ -109,25 +109,25 @@
 		{/if}
 	</div>
 	<hr class="mx-4" />
-	<div class="flex my-2 align-middle px-5">
-		<!-- <div class="w-6/12 text-center">
+	<div class="flex my-2 align-middle mx-4">
+		<div class="w-6/12 text-center">
 			<input type="file" id="formFile" />
-		</div> -->
-		<div class="w-2/12 text-center">
+		</div>
+		<div class="flex align-middle w-2/12 justify-end px-8">
 			<input
-				class=""
+				class="w-5 rounded-lg border-4 border-white mr-1 "
 				type="checkbox"
 				id="inlineCheckbox4"
 				bind:checked={isCollaborative}
 			/>
-			<label class="font-bold" for="inlineCheckbox4">Collaborative</label>
+			<label for="inlineCheckbox4">Collaborative</label>
 		</div>
 		{#if isCollaborative}
 			<div class="w-4/12">
 				<input
 					type="text"
+					class="rounded px-2 w-full"
 					placeholder="Organizations/Initiatives"
-					class="rounded w-full p-2"
 				/>
 			</div>
 		{/if}
