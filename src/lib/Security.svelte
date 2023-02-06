@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { tickers } from "../tickers";
 	import type { securityType } from "src/types";
+	//@ts-ignore
 	import AutoComplete from "simple-svelte-autocomplete";
 
 	let security = {} as securityType;
