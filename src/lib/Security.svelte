@@ -1,19 +1,24 @@
 <script lang="ts">
 	import { tickers } from "../tickers";
 	import type { securityType } from "src/types";
+	//@ts-ignore
 	import AutoComplete from "simple-svelte-autocomplete";
 
 	let security = {} as securityType;
 
-	$: gicsSector = security?.gicsSector;
-	$: countryOfRisk = security?.countryOfRisk;
+	$: sector = security?.sector;
+	$: country = security?.country;
 	$: companyName = security?.companyName;
+	$: rating = security?.rating;
+	$: esgRating = security?.esgRating;
+	$: coveringAnalyst = security?.coveringAnalyst;
+	$: source = security?.source;
 </script>
 
 <div class="card">
 	<div class="card-header bg-jhJade-100 text-3xl">Company</div>
 	<div class="p-4">
-		<div class="flex items-center justify-center">
+		<div class="flex items-center justify-center mb-4">
 			<AutoComplete
 				items={tickers}
 				id="tester"
@@ -26,7 +31,8 @@
 				hideArrow
 			/>
 		</div>
-		<div class="flex mt-4">
+		{#if source === 'equity'}
+		<div class="flex mt-1">
 			<span class="w-48">Company</span>
 			<input
 				type="text"
@@ -35,13 +41,14 @@
 				bind:value={companyName}
 			/>
 		</div>
+		{/if}
 		<div class="flex mt-1">
-			<span class="w-48">GICS Sector</span>
+			<span class="w-48">{source === 'equity' ? 'GICS Sector' : 'Barclays Class 4'}</span>
 			<input
 				type="text"
 				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
 				readonly
-				bind:value={gicsSector}
+				bind:value={sector}
 			/>
 		</div>
 		<div class="flex mt-1">
@@ -50,8 +57,39 @@
 				type="text"
 				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
 				readonly
-				bind:value={countryOfRisk}
+				bind:value={country}
 			/>
 		</div>
+		<div class="flex mt-1">
+			<span class="w-48">Rating</span>
+			<input
+				type="text"
+				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
+				readonly
+				bind:value={rating}
+			/>
+		</div>
+		{#if source === 'fi'}
+		<div class="flex mt-1">
+			<span class="w-48">ESG Rating</span>
+			<input
+				type="text"
+				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
+				readonly
+				bind:value={esgRating}
+			/>
+		</div>
+		{/if}
+		{#if coveringAnalyst != ''}
+		<div class="flex mt-1">
+			<span class="w-48">Covering Analyst</span>
+			<input
+				type="text"
+				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
+				readonly
+				bind:value={coveringAnalyst}
+			/>
+		</div>
+		{/if}
 	</div>
 </div>

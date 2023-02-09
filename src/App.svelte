@@ -11,10 +11,10 @@
 				ESG Template
 			</div>
 			<div class="flex">
-				<div class="w-8/12 m-4">
+				<div class="w-7/12 m-4">
 					<Meeting />
 				</div>
-				<div class="w-4/12 my-4 mr-4">
+				<div class="w-5/12 my-4 mr-4">
 					<Security />
 				</div>
 			</div>

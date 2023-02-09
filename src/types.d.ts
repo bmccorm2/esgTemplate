@@ -2,9 +2,13 @@ declare module "simple-svelte-autocomplete";
 
 export interface securityType {
 	ticker: string | undefined;
-	gicsSector?: string;
-	countryOfRisk?: string;
-	companyName?: string;
+	sector: string;
+	country: string;
+	companyName: string;
+	rating: string;
+	esgRating: string;
+	coveringAnalyst: string;
+	source: string;
 }
 
 export interface meetingType {

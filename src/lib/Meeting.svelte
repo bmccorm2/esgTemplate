@@ -18,7 +18,7 @@
 				<input type="date" class="" />
 			</div>
 		</div>
-		<div class="mt-3 flex">
+		<div class="mt-6 flex">
 			<span class="w-60">Subject</span>
 			<input type="text" class="w-full rounded text-jhSlate-100 pl-2" />
 		</div>
@@ -26,7 +26,7 @@
 			<span class="w-60">Company Attendees</span>
 			<input type="text" class="w-full rounded text-jhSlate-100 pl-2" />
 		</div>
-		<div class="mt-1 flex">
+		<div class="mt-3 flex">
 			<span class="w-60">JHI Attendees</span>
 			<input type="text" class="w-full rounded text-jhSlate-100 pl-2" />
 		</div>
