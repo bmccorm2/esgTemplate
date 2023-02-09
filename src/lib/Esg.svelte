@@ -58,7 +58,7 @@
 				class="border-4 border-sky-600 rounded m-1 px-2 pb-2 flex-grow"
 				transition:fade
 			>
-				<h5 class="text-center text-2xl text-jhJade-100 mb-2 underline">
+				<h5 class="text-center text-2xl font-bold text-jhJade-100 mb-2 underline">
 					Environment
 				</h5>
 				{#each esgMapping.filter((e) => e.component === "env") as topic}
@@ -76,7 +76,7 @@
 				class="border-4 border-sky-600 rounded m-1 px-2 pb-2 flex-grow"
 				transition:fade
 			>
-				<h5 class="text-center text-2xl text-jhJade-100 mb-2 underline">
+				<h5 class="text-center text-2xl font-bold text-jhJade-100 mb-2 underline">
 					Social
 				</h5>
 				{#each esgMapping.filter((e) => e.component === "soc") as topic}
@@ -94,7 +94,7 @@
 				class="border-4 border-sky-600 rounded m-1 px-2 pb-2 flex-grow"
 				transition:fade
 			>
-				<h5 class="text-center text-2xl text-jhJade-100 mb-2 underline">
+				<h5 class="text-center text-2xl font-bold text-jhJade-100 mb-2 underline">
 					Governance
 				</h5>
 				{#each esgMapping.filter((e) => e.component === "gov") as topic}

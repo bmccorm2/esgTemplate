@@ -61,7 +61,7 @@
 			/>
 		</div>
 		<div class="flex mt-1">
-			<span class="w-48">Rating</span>
+			<span class="w-48">{source === 'equity' ? 'Rating' : 'Recommendation'}</span>
 			<input
 				type="text"
 				class="bg-gray-300 rounded w-full text-jhSlate-100 px-2"
